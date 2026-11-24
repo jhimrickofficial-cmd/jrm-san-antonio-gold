@@ -1,0 +1,5223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>San Antonio Gold | Specialty Coffee in Southtown, San Antonio</title>
+
+    <meta name="description" content="Discover San Antonio Gold, a specialty coffee shop on South Flores Street. Enjoy espresso, cold brew, tea and golden everyday moments in San Antonio, Texas.">
+
+    <meta name="theme-color" content="#171714">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="San Antonio Gold | Good Coffee. Golden Moments.">
+    <meta property="og:description" content="A little gold in every day. Discover specialty coffee in Southtown, San Antonio.">
+    <meta property="og:image" content="gld1.png">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "San Antonio Gold",
+        "description": "Specialty coffee shop located on South Flores Street in San Antonio, Texas.",
+        "telephone": "+1-210-667-6141",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1913 S Flores St # A",
+            "addressLocality": "San Antonio",
+            "addressRegion": "TX",
+            "postalCode": "78204",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 29.4053309,
+            "longitude": -98.5027644
+        },
+        "hasMap": "https://www.google.com/maps?cid=8342807977883015376",
+        "sameAs": [
+            "https://www.instagram.com/sanantoniogold/"
+        ],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "06:30",
+                "closes": "17:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "07:00",
+                "closes": "17:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "08:00",
+                "closes": "15:00"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ========================================
+           01. DESIGN SYSTEM
+        ======================================== */
+
+        :root {
+            --espresso: #171714;
+            --espresso-light: #24241f;
+            --gold: #c5a059;
+            --gold-light: #dfc58b;
+            --ivory: #f7f3e9;
+            --paper: #eee8dc;
+            --brown: #594334;
+            --olive: #72745b;
+            --white: #ffffff;
+            --muted: #68645c;
+
+            --font-display: "DM Serif Display", Georgia, serif;
+            --font-body: "DM Sans", Arial, sans-serif;
+            --font-accent: "Space Grotesk", Arial, sans-serif;
+
+            --container: 1440px;
+            --gutter: clamp(24px, 6vw, 100px);
+            --section-space: clamp(72px, 10vw, 150px);
+            --nav-height: 88px;
+
+            --ease: cubic-bezier(.22, 1, .36, 1);
+            --border-dark: rgba(255,255,255,.13);
+            --border-light: rgba(23,23,20,.15);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            margin: 0;
+            background: var(--ivory);
+            color: var(--espresso);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        body.menu-open,
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--espresso);
+        }
+
+        h1, h2, h3, p, figure {
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 400;
+        }
+
+        h1, h2 {
+            font-family: var(--font-display);
+            letter-spacing: -.035em;
+            line-height: 1.02;
+        }
+
+        h2 {
+            font-size: clamp(43px, 6vw, 90px);
+        }
+
+        h3 {
+            font-size: clamp(24px, 3vw, 38px);
+            font-family: var(--font-display);
+            line-height: 1.15;
+        }
+
+        p {
+            max-width: 62ch;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        svg {
+            display: block;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 6px;
+        }
+
+        button:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        section {
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: var(--gutter);
+        }
+
+        .section-padding {
+            padding-block: var(--section-space);
+        }
+
+        .dark-section {
+            background: var(--espresso);
+            color: var(--ivory);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            font-family: var(--font-accent);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .19em;
+            line-height: 1.5;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .section-heading {
+            margin-top: 22px;
+            margin-bottom: 25px;
+        }
+
+        .section-description {
+            color: var(--muted);
+            line-height: 1.85;
+        }
+
+        .dark-section .section-description {
+            color: #c5c1b8;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+            background: var(--gold);
+            color: var(--espresso);
+            padding: 15px 20px;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* ========================================
+           02. BUTTONS
+        ======================================== */
+
+        .btn {
+            min-height: 57px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            padding: 15px 26px;
+            border: 1px solid transparent;
+            font-family: var(--font-accent);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .035em;
+            line-height: 1.3;
+            transition:
+                background .35s var(--ease),
+                color .35s var(--ease),
+                border-color .35s var(--ease),
+                transform .35s var(--ease);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            transition: transform .35s var(--ease);
+        }
+
+        .btn:hover svg {
+            transform: translate(3px, -3px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--espresso);
+            border-color: var(--gold);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        .btn-outline {
+            color: var(--ivory);
+            border-color: rgba(255,255,255,.5);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            color: var(--espresso);
+            border-color: var(--ivory);
+            background: var(--ivory);
+        }
+
+        .btn-dark {
+            background: var(--espresso);
+            border-color: var(--espresso);
+            color: var(--ivory);
+        }
+
+        .btn-dark:hover {
+            background: var(--brown);
+            border-color: var(--brown);
+        }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            font-family: var(--font-accent);
+            font-size: 14px;
+            font-weight: 600;
+            padding-block: 8px;
+            border-bottom: 1px solid currentColor;
+            transition: color .3s;
+        }
+
+        .text-link:hover {
+            color: #886629;
+        }
+
+        .text-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ========================================
+           03. NAVIGATION
+        ======================================== */
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            z-index: 2000;
+            pointer-events: none;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            color: var(--ivory);
+            transition:
+                background .4s var(--ease),
+                box-shadow .4s var(--ease);
+        }
+
+        .site-header.scrolled,
+        .site-header.menu-active {
+            background: rgba(23,23,20,.97);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 1px 0 var(--border-dark);
+        }
+
+        .nav-container {
+            min-height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            width: 100%;
+            max-width: 1600px;
+            padding-inline: clamp(24px, 4.5vw, 75px);
+            margin-inline: auto;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            color: var(--ivory);
+        }
+
+        .brand-logo {
+            width: 190px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: clamp(17px, 2.2vw, 35px);
+        }
+
+        .nav-links > a {
+            font-family: var(--font-accent);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .025em;
+            white-space: nowrap;
+            position: relative;
+            padding-block: 12px;
+        }
+
+        .nav-links > a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            height: 1px;
+            width: 100%;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s var(--ease);
+        }
+
+        .nav-links > a:hover::after,
+        .nav-links > a.active::after {
+            transform: scaleX(1);
+        }
+
+        .header-cta {
+            min-height: 45px;
+            padding: 12px 19px;
+            font-size: 12px;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--border-dark);
+            background: transparent;
+            color: var(--ivory);
+            position: relative;
+        }
+
+        .menu-toggle span {
+            position: absolute;
+            height: 1px;
+            width: 23px;
+            background: currentColor;
+            left: 12px;
+            transition: transform .35s, top .35s;
+        }
+
+        .menu-toggle span:first-child {
+            top: 18px;
+        }
+
+        .menu-toggle span:last-child {
+            top: 27px;
+        }
+
+        .menu-toggle[aria-expanded="true"] span:first-child {
+            top: 23px;
+            transform: rotate(45deg);
+        }
+
+        .menu-toggle[aria-expanded="true"] span:last-child {
+            top: 23px;
+            transform: rotate(-45deg);
+        }
+
+        .mobile-nav {
+            background: var(--espresso);
+            border-top: 1px solid var(--border-dark);
+            padding: 20px 26px 35px;
+            max-height: calc(100dvh - var(--nav-height));
+            overflow-y: auto;
+        }
+
+        .mobile-nav > a:not(.btn) {
+            display: block;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-dark);
+            font-family: var(--font-display);
+            font-size: 29px;
+            line-height: 1.25;
+        }
+
+        .mobile-nav .btn {
+            margin-top: 28px;
+            width: 100%;
+        }
+
+        /* ========================================
+           04. IMAGE SYSTEM
+        ======================================== */
+
+        .media {
+            position: relative;
+            overflow: hidden;
+            background: #39352b;
+        }
+
+        .media img {
+            transition: transform .9s var(--ease);
+        }
+
+        .media:hover img {
+            transform: scale(1.045);
+        }
+
+        .media.image-unavailable {
+            background:
+                radial-gradient(
+                    ellipse at 30% 20%,
+                    #685437,
+                    transparent 70%
+                ),
+                #292820;
+        }
+
+        .media.image-unavailable img {
+            visibility: hidden;
+        }
+
+        .media.image-unavailable::after {
+            content: "SAN ANTONIO GOLD";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: var(--gold-light);
+            font-family: var(--font-accent);
+            font-size: 10px;
+            letter-spacing: .18em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .photo-caption {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-family: var(--font-accent);
+            font-size: 10px;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            margin-top: 12px;
+        }
+
+        /* ========================================
+           05. HERO
+        ======================================== */
+
+        .hero {
+            min-height: max(720px, 100svh);
+            min-height: max(720px, 100vh);
+            position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--espresso);
+            color: var(--ivory);
+        }
+
+        @supports (height: 100svh) {
+            .hero {
+                min-height: max(720px, 100svh);
+            }
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: -8% 0;
+            z-index: -3;
+            pointer-events: none;
+            will-change: transform;
+            background: #514330;
+        }
+
+        .hero-background img {
+            object-position: center 52%;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background: linear-gradient(
+                90deg,
+                rgba(14,14,12,.94) 0%,
+                rgba(14,14,12,.78) 28%,
+                rgba(14,14,12,.38) 65%,
+                rgba(14,14,12,.16) 100%
+            );
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(
+                0deg,
+                rgba(15,15,12,.55),
+                transparent 35%,
+                transparent 70%,
+                rgba(15,15,12,.35)
+            );
+        }
+
+        .hero-inner {
+            width: 100%;
+            padding-top: calc(var(--nav-height) + 26px);
+            padding-bottom: 120px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-eyebrow {
+            color: var(--gold-light);
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: clamp(70px, 8.3vw, 133px);
+            line-height: .96;
+            letter-spacing: -.045em;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero h1 .hero-accent {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .hero-description {
+            max-width: 470px;
+            font-size: clamp(16px, 1.5vw, 19px);
+            color: #e0ddd5;
+            line-height: 1.75;
+            margin-top: 27px;
+        }
+
+        .hero-actions {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-bottom {
+            position: absolute;
+            bottom: 34px;
+            left: var(--gutter);
+            right: var(--gutter);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .scroll-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-accent);
+            font-size: 10px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            position: relative;
+            width: 1px;
+            height: 42px;
+            background: rgba(255,255,255,.28);
+            overflow: hidden;
+        }
+
+        .scroll-line::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            width: 100%;
+            height: 65%;
+            background: var(--gold-light);
+            animation: scrollDown 2.5s infinite;
+        }
+
+        @keyframes scrollDown {
+            to {
+                top: 120%;
+            }
+        }
+
+        .hero-location {
+            text-align: right;
+        }
+
+        .hero-location small {
+            display: block;
+            color: var(--gold-light);
+            font-family: var(--font-accent);
+            font-size: 10px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .hero-location p {
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .hero-stamp {
+            position: absolute;
+            right: 8%;
+            top: 36%;
+            width: clamp(95px, 10vw, 150px);
+            color: var(--gold-light);
+            opacity: .8;
+            pointer-events: none;
+            animation: stampRotate 40s linear infinite;
+        }
+
+        @keyframes stampRotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ========================================
+           06. BRAND STRIP
+        ======================================== */
+
+        .brand-strip {
+            background: var(--gold);
+            color: var(--espresso);
+            padding: 21px var(--gutter);
+        }
+
+        .brand-strip-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(16px, 4vw, 60px);
+            flex-wrap: wrap;
+        }
+
+        .brand-strip span {
+            font-family: var(--font-accent);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .strip-star {
+            font-size: 21px !important;
+            font-weight: 400 !important;
+            line-height: 1;
+        }
+
+        /* ========================================
+           07. OUR STORY
+        ======================================== */
+
+        .story {
+            background: var(--ivory);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.06fr .94fr;
+            align-items: center;
+            gap: clamp(45px, 8vw, 125px);
+        }
+
+        .story-visual {
+            position: relative;
+            padding-right: 11%;
+            padding-bottom: 14%;
+        }
+
+        .story-main-image {
+            aspect-ratio: 4 / 4.9;
+        }
+
+        .story-small-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 47%;
+            aspect-ratio: 4 / 4.2;
+            border: 8px solid var(--ivory);
+        }
+
+        .story-image-number {
+            position: absolute;
+            top: -30px;
+            left: -14px;
+            font-family: var(--font-display);
+            color: var(--gold);
+            font-size: 75px;
+            line-height: 1;
+            z-index: 2;
+        }
+
+        .story-copy .eyebrow {
+            color: #886629;
+        }
+
+        .story-copy h2 {
+            margin-block: 24px;
+        }
+
+        .story-copy h2 em {
+            color: #8e6a31;
+            font-weight: 400;
+        }
+
+        .story-copy p + p {
+            margin-top: 18px;
+        }
+
+        .story-copy .text-link {
+            margin-top: 26px;
+        }
+
+        .story-note {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            border-top: 1px solid var(--border-light);
+            margin-top: 40px;
+            padding-top: 25px;
+        }
+
+        .story-note svg {
+            width: 49px;
+            height: 49px;
+            color: #886629;
+            flex-shrink: 0;
+        }
+
+        .story-note span {
+            font-family: var(--font-accent);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+            line-height: 1.9;
+        }
+
+        /* ========================================
+           08. COFFEE EXPERIENCE
+        ======================================== */
+
+        .coffee {
+            background: var(--paper);
+        }
+
+        .section-header-split {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 35px;
+            align-items: end;
+            margin-bottom: 55px;
+        }
+
+        .section-header-split h2 {
+            margin-top: 19px;
+        }
+
+        .section-header-split .section-description {
+            max-width: 410px;
+            justify-self: end;
+        }
+
+        .coffee-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr 1fr;
+            gap: clamp(18px, 2.6vw, 40px);
+            align-items: start;
+        }
+
+        .coffee-card:nth-child(2) {
+            margin-top: 85px;
+        }
+
+        .coffee-card:nth-child(3) {
+            margin-top: 28px;
+        }
+
+        .coffee-card .media {
+            aspect-ratio: 4 / 5;
+        }
+
+        .coffee-card:first-child .media {
+            aspect-ratio: 4 / 5.8;
+        }
+
+        .coffee-card .coffee-card-content {
+            padding-top: 22px;
+        }
+
+        .coffee-card-index {
+            color: #886629;
+            font-family: var(--font-accent);
+            font-size: 11px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .coffee-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .coffee-card p {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .coffee-feature {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--espresso);
+            color: var(--ivory);
+        }
+
+        .coffee-feature-image {
+            min-height: 350px;
+        }
+
+        .coffee-feature-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: clamp(30px, 5vw, 75px);
+        }
+
+        .coffee-feature-copy h3 {
+            font-size: clamp(37px, 4vw, 62px);
+            margin-block: 18px;
+        }
+
+        .coffee-feature-copy p {
+            color: #c6c1b7;
+            font-size: 15px;
+        }
+
+        .coffee-feature-copy .text-link {
+            color: var(--gold-light);
+            margin-top: 22px;
+        }
+
+        /* ========================================
+           09. CINEMATIC PARALLAX
+        ======================================== */
+
+        .parallax-section {
+            min-height: 640px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            isolation: isolate;
+            background: var(--espresso);
+            color: var(--ivory);
+            padding: 100px var(--gutter);
+        }
+
+        .parallax-background {
+            position: absolute;
+            inset: -14% 0;
+            z-index: -3;
+            will-change: transform;
+        }
+
+        .parallax-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(17,17,14,.64);
+            z-index: -2;
+        }
+
+        .parallax-content {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .parallax-content .eyebrow {
+            color: var(--gold-light);
+            margin-bottom: 24px;
+        }
+
+        .parallax-content h2 {
+            font-size: clamp(53px, 7.4vw, 115px);
+        }
+
+        .parallax-content h2 em {
+            color: var(--gold-light);
+        }
+
+        .parallax-content p {
+            margin: 24px auto 0;
+            max-width: 460px;
+            color: #e0dcd1;
+            font-size: 16px;
+        }
+
+        .parallax-mark {
+            margin: 0 auto 30px;
+            width: 60px;
+            height: 60px;
+            color: var(--gold-light);
+        }
+
+        /* ========================================
+           10. EXPERIENCE
+        ======================================== */
+
+        .experience {
+            overflow: hidden;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: clamp(45px, 7vw, 105px);
+            align-items: center;
+        }
+
+        .experience-copy h2 {
+            margin-top: 24px;
+            margin-bottom: 25px;
+        }
+
+        .experience-copy h2 em {
+            color: var(--gold);
+        }
+
+        .experience-list {
+            margin-top: 35px;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 45px 1fr;
+            gap: 15px;
+            padding-block: 22px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .experience-item:last-child {
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .experience-item > span {
+            color: var(--gold);
+            font-family: var(--font-accent);
+            font-size: 11px;
+            padding-top: 5px;
+        }
+
+        .experience-item h3 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .experience-item p {
+            color: #c0bdb4;
+            font-size: 14px;
+        }
+
+        .experience-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            align-items: start;
+        }
+
+        .experience-visual .media:first-child {
+            grid-column: 1 / -1;
+            aspect-ratio: 1.28;
+        }
+
+        .experience-visual .media:nth-child(2) {
+            aspect-ratio: 4 / 4.2;
+        }
+
+        .experience-visual .media:nth-child(3) {
+            aspect-ratio: 4 / 4.2;
+            margin-top: 36px;
+        }
+
+        .experience-watermark {
+            position: absolute;
+            bottom: -65px;
+            right: -20px;
+            font-family: var(--font-display);
+            font-size: clamp(150px, 28vw, 440px);
+            line-height: 1;
+            color: rgba(255,255,255,.025);
+            pointer-events: none;
+        }
+
+        /* ========================================
+           11. GALLERY
+        ======================================== */
+
+        .gallery {
+            background: var(--ivory);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 55px;
+        }
+
+        .gallery-header .eyebrow {
+            color: #886629;
+        }
+
+        .gallery-header h2 {
+            margin-block: 24px;
+        }
+
+        .gallery-header p {
+            margin-inline: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            grid-auto-rows: clamp(65px, 8.5vw, 125px);
+            gap: 16px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            display: block;
+            position: relative;
+            padding: 0;
+            border: 0;
+            min-width: 0;
+            background: var(--brown);
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        .gallery-item .media {
+            position: absolute;
+            inset: 0;
+        }
+
+        .gallery-item img {
+            transition: transform .75s var(--ease);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.09);
+        }
+
+        .gallery-item:nth-child(8n+1) {
+            grid-column: span 5;
+            grid-row: span 4;
+        }
+
+        .gallery-item:nth-child(8n+2) {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(8n+3) {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(8n+4) {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(8n+5) {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(8n+6) {
+            grid-column: span 5;
+            grid-row: span 3;
+        }
+
+        .gallery-item:nth-child(8n+7) {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(8n+8) {
+            grid-column: span 7;
+            grid-row: span 3;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 18px;
+            background: linear-gradient(
+                transparent 55%,
+                rgba(0,0,0,.55)
+            );
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .gallery-item:hover .gallery-overlay,
+        .gallery-item:focus-visible .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            font-family: var(--font-accent);
+            font-size: 11px;
+            letter-spacing: .13em;
+        }
+
+        .gallery-overlay svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .gallery-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 42px;
+        }
+
+        .gallery-count {
+            font-family: var(--font-accent);
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .gallery-grid.expanded {
+            grid-auto-flow: row dense;
+        }
+
+        /* ========================================
+           12. LIGHTBOX
+        ======================================== */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            max-height: none;
+            border: none;
+            padding: 20px;
+            margin: 0;
+            background: rgba(12,12,10,.98);
+            color: var(--ivory);
+        }
+
+        .lightbox[open] {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lightbox::backdrop {
+            background: rgba(12,12,10,.98);
+        }
+
+        .lightbox-top {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 10px;
+        }
+
+        .lightbox-top p {
+            font-family: var(--font-accent);
+            letter-spacing: .14em;
+            font-size: 12px;
+        }
+
+        .lightbox-button {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.2);
+            color: var(--ivory);
+            transition: background .3s;
+            flex-shrink: 0;
+        }
+
+        .lightbox-button:hover {
+            background: var(--gold);
+            color: var(--espresso);
+        }
+
+        .lightbox-button svg {
+            width: 23px;
+            height: 23px;
+        }
+
+        .lightbox-stage {
+            display: grid;
+            grid-template-columns: 55px minmax(0, 1fr) 55px;
+            gap: 20px;
+            align-items: center;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .lightbox-photo {
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            display: grid;
+            place-items: center;
+            touch-action: pan-y;
+        }
+
+        .lightbox-photo img {
+            width: 100%;
+            height: 100%;
+            max-height: 76vh;
+            max-height: 76dvh;
+            object-fit: contain;
+        }
+
+        .lightbox-caption {
+            text-align: center;
+            font-family: var(--font-accent);
+            font-size: 12px;
+            padding: 16px;
+            color: #c8c4b8;
+        }
+
+        /* ========================================
+           13. CUSTOMER REVIEWS
+        ======================================== */
+
+        .reviews {
+            background: var(--paper);
+        }
+
+        .reviews-inner {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            align-items: center;
+            gap: clamp(40px, 7vw, 110px);
+        }
+
+        .reviews-heading h2 {
+            margin-block: 22px;
+        }
+
+        .reviews-heading .text-link {
+            margin-top: 25px;
+        }
+
+        .review-card {
+            position: relative;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            padding: 45px 0;
+        }
+
+        .review-quote {
+            color: #886629;
+            font-family: var(--font-display);
+            font-size: 110px;
+            line-height: .7;
+            margin-bottom: 18px;
+        }
+
+        .review-card blockquote {
+            margin: 0;
+            font-family: var(--font-display);
+            font-size: clamp(30px, 4vw, 56px);
+            line-height: 1.2;
+            letter-spacing: -.025em;
+        }
+
+        .review-source {
+            margin-top: 25px;
+            color: var(--muted);
+            font-family: var(--font-accent);
+            font-size: 12px;
+            letter-spacing: .025em;
+        }
+
+        .review-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .review-control {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--espresso);
+            transition: background .3s, color .3s;
+        }
+
+        .review-control:hover {
+            background: var(--espresso);
+            color: var(--ivory);
+        }
+
+        .review-control svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .review-counter {
+            margin-left: 10px;
+            font-family: var(--font-accent);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* ========================================
+           14. VISIT US
+        ======================================== */
+
+        .visit-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: clamp(40px, 7vw, 95px);
+            align-items: start;
+        }
+
+        .visit-copy h2 {
+            margin-block: 24px;
+        }
+
+        .visit-copy h2 em {
+            color: #886629;
+        }
+
+        .visit-details {
+            margin-top: 35px;
+        }
+
+        .visit-detail {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 15px;
+            border-top: 1px solid var(--border-light);
+            padding: 23px 0;
+        }
+
+        .visit-detail > svg {
+            width: 23px;
+            height: 23px;
+            color: #886629;
+            margin-top: 3px;
+        }
+
+        .visit-detail h3 {
+            font-family: var(--font-accent);
+            font-size: 12px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        .visit-detail address {
+            font-style: normal;
+        }
+
+        .visit-detail address,
+        .visit-detail p,
+        .visit-detail a {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .visit-detail a:hover {
+            color: var(--espresso);
+            text-decoration: underline;
+        }
+
+        .hours-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 370px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .hours-table td {
+            padding-block: 5px;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            white-space: nowrap;
+            padding-left: 12px;
+        }
+
+        .hours-note {
+            margin-top: 10px;
+            font-size: 12px !important;
+        }
+
+        .visit-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .visit-visual {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .visit-image {
+            aspect-ratio: 1.65;
+        }
+
+        .map-frame {
+            min-height: 330px;
+            background: var(--paper);
+            position: relative;
+        }
+
+        .map-frame iframe {
+            display: block;
+            width: 100%;
+            height: 330px;
+            border: 0;
+        }
+
+        .map-bottom {
+            background: var(--espresso);
+            color: var(--ivory);
+            padding: 22px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .map-bottom span {
+            font-family: var(--font-accent);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .map-bottom a {
+            color: var(--gold-light);
+            font-size: 12px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            white-space: nowrap;
+        }
+
+        /* ========================================
+           15. FINAL CALL TO ACTION
+        ======================================== */
+
+        .final-cta {
+            min-height: 620px;
+        }
+
+        .final-cta::after {
+            background: rgba(15,15,12,.7);
+        }
+
+        .final-cta .btn {
+            margin-top: 32px;
+        }
+
+        .final-cta .parallax-content h2 {
+            max-width: 850px;
+            margin-inline: auto;
+        }
+
+        .final-cta-small {
+            display: block;
+            margin-top: 24px;
+            color: #ddd5c6;
+            font-family: var(--font-accent);
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        /* ========================================
+           16. FOOTER
+        ======================================== */
+
+        .footer {
+            background: #10100e;
+            color: var(--ivory);
+            padding-block: 75px 28px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.45fr .75fr 1fr .8fr;
+            gap: 35px;
+            padding-bottom: 55px;
+        }
+
+        .footer-brand .brand-logo {
+            width: 230px;
+            max-width: 100%;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #b5b1a6;
+            max-width: 300px;
+            margin-top: 22px;
+            line-height: 1.8;
+        }
+
+        .footer-column h3 {
+            font-family: var(--font-accent);
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: .16em;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .footer-column a,
+        .footer-column p {
+            display: block;
+            font-size: 13px;
+            color: #c2bfb6;
+            line-height: 1.85;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .footer-bottom p {
+            font-family: var(--font-accent);
+            font-size: 11px;
+            color: #a9a69d;
+        }
+
+        .footer-top-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-accent);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .footer-top-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ========================================
+           17. MOBILE STICKY CTA
+        ======================================== */
+
+        .mobile-sticky {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            background: var(--espresso);
+            padding: 10px 15px calc(10px + env(safe-area-inset-bottom));
+            border-top: 1px solid var(--border-dark);
+            box-shadow: 0 -8px 30px rgba(0,0,0,.12);
+        }
+
+        .mobile-sticky .btn {
+            width: 100%;
+            min-height: 49px;
+        }
+
+        /* ========================================
+           18. ANIMATIONS
+        ======================================== */
+
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity .85s var(--ease),
+                transform .85s var(--ease);
+            transition-delay: var(--delay, 0ms);
+        }
+
+        .js .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .js .reveal-left {
+            opacity: 0;
+            transform: translateX(-35px);
+            transition:
+                opacity .95s var(--ease),
+                transform .95s var(--ease);
+        }
+
+        .js .reveal-right {
+            opacity: 0;
+            transform: translateX(35px);
+            transition:
+                opacity .95s var(--ease),
+                transform .95s var(--ease);
+        }
+
+        .js .reveal-left.is-visible,
+        .js .reveal-right.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .js .image-reveal {
+            clip-path: inset(8% 0 8% 0);
+            opacity: 0;
+            transition:
+                clip-path 1.2s var(--ease),
+                opacity .8s var(--ease);
+        }
+
+        .js .image-reveal.is-visible {
+            clip-path: inset(0);
+            opacity: 1;
+        }
+
+        .js .image-reveal img {
+            transform: scale(1.12);
+        }
+
+        .js .image-reveal.is-visible img {
+            transform: scale(1);
+            transition: transform 1.5s var(--ease);
+        }
+
+        .js .image-reveal.is-visible:hover img {
+            transform: scale(1.045);
+        }
+
+        .hero-animate {
+            animation: heroEntrance 1s var(--ease) both;
+            animation-delay: var(--delay, 0ms);
+        }
+
+        @keyframes heroEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(27px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========================================
+           19. RESPONSIVE DESIGN
+        ======================================== */
+
+        @media (min-width: 1600px) {
+            .hero-inner {
+                max-width: 1600px;
+            }
+
+            .hero-bottom {
+                left: max(
+                    var(--gutter),
+                    calc((100vw - 1400px) / 2)
+                );
+                right: max(
+                    var(--gutter),
+                    calc((100vw - 1400px) / 2)
+                );
+            }
+        }
+
+        @media (max-width: 1150px) {
+            .brand-logo {
+                width: 165px;
+            }
+
+            .nav-container {
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 19px;
+            }
+
+            .header-cta {
+                padding-inline: 14px;
+            }
+
+            .hero-stamp {
+                right: 5%;
+                width: 105px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1.3fr .8fr 1fr;
+            }
+
+            .footer-column:last-child {
+                grid-column: 2 / 4;
+            }
+        }
+
+        @media (max-width: 900px) {
+            :root {
+                --nav-height: 76px;
+                --gutter: 36px;
+            }
+
+            .nav-links,
+            .header-cta {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: max(690px, 90svh);
+            }
+
+            .hero h1 {
+                font-size: clamp(65px, 10vw, 100px);
+            }
+
+            .hero-stamp {
+                display: none;
+            }
+
+            .story-grid,
+            .experience-grid,
+            .visit-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .story-visual {
+                padding-right: 7%;
+                padding-bottom: 10%;
+            }
+
+            .story-note {
+                margin-top: 25px;
+            }
+
+            .coffee-grid {
+                gap: 20px;
+            }
+
+            .coffee-card:nth-child(2) {
+                margin-top: 40px;
+            }
+
+            .coffee-card:nth-child(3) {
+                margin-top: 15px;
+            }
+
+            .section-header-split {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+
+            .section-header-split .section-description {
+                justify-self: start;
+                max-width: 550px;
+            }
+
+            .gallery-grid {
+                gap: 10px;
+            }
+
+            .reviews-inner {
+                gap: 35px;
+            }
+
+            .map-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            :root {
+                --gutter: 23px;
+                --section-space: 76px;
+                --nav-height: 70px;
+            }
+
+            html {
+                scroll-padding-top: 80px;
+            }
+
+            body {
+                padding-bottom: calc(
+                    69px + env(safe-area-inset-bottom)
+                );
+            }
+
+            .nav-container {
+                padding-inline: 22px;
+            }
+
+            .brand-logo {
+                width: 165px;
+            }
+
+            .hero {
+                min-height: max(660px, 94svh);
+                text-align: center;
+            }
+
+            .hero-inner {
+                padding-top: calc(var(--nav-height) + 15px);
+                padding-bottom: 115px;
+            }
+
+            .hero-content {
+                margin-inline: auto;
+            }
+
+            .hero::before {
+                background: rgba(14,14,12,.69);
+            }
+
+            .hero-background img {
+                object-position: center;
+            }
+
+            .hero-eyebrow {
+                margin-bottom: 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(51px, 11.4vw, 82px);
+                letter-spacing: -.045em;
+                line-height: 1.02;
+            }
+
+            .hero-description {
+                margin: 22px auto 0;
+                max-width: 390px;
+                font-size: 15px;
+                line-height: 1.75;
+            }
+
+            .hero-actions {
+                justify-content: center;
+                gap: 11px;
+                margin-top: 26px;
+            }
+
+            .hero-actions .btn {
+                min-height: 53px;
+                padding: 13px 18px;
+                font-size: 12px;
+            }
+
+            .hero-bottom {
+                bottom: 22px;
+                justify-content: center;
+            }
+
+            .hero-location {
+                text-align: center;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+
+            .brand-strip {
+                padding-block: 17px;
+            }
+
+            .brand-strip-inner {
+                gap: 10px 16px;
+            }
+
+            .brand-strip span {
+                font-size: 9px;
+                letter-spacing: .1em;
+            }
+
+            .brand-strip .strip-star {
+                font-size: 15px !important;
+            }
+
+            .brand-strip-inner > :nth-child(n+4) {
+                display: none;
+            }
+
+            .story-grid,
+            .experience-grid,
+            .visit-grid,
+            .reviews-inner {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+
+            .story-copy,
+            .experience-copy,
+            .visit-copy,
+            .reviews-heading,
+            .section-header-split {
+                text-align: center;
+            }
+
+            .story-copy p,
+            .experience-copy p,
+            .visit-copy > p,
+            .reviews-heading p,
+            .section-header-split p {
+                margin-inline: auto;
+            }
+
+            .story-visual {
+                max-width: 490px;
+                margin: 0 auto;
+                width: 100%;
+                padding-right: 10%;
+                padding-bottom: 10%;
+            }
+
+            .story-main-image {
+                aspect-ratio: 4 / 4.1;
+            }
+
+            .story-image-number {
+                font-size: 60px;
+                top: -22px;
+                left: -7px;
+            }
+
+            .story-small-image {
+                border-width: 6px;
+                width: 43%;
+            }
+
+            .story-note {
+                justify-content: center;
+                text-align: left;
+            }
+
+            h2 {
+                font-size: clamp(43px, 9.4vw, 65px);
+            }
+
+            .eyebrow {
+                font-size: 10px;
+                letter-spacing: .15em;
+            }
+
+            .eyebrow::before {
+                width: 23px;
+            }
+
+            .section-description {
+                font-size: 15px;
+            }
+
+            .section-header-split {
+                justify-items: center;
+            }
+
+            .section-header-split .section-description {
+                justify-self: center;
+            }
+
+            .coffee-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px 14px;
+            }
+
+            .coffee-card:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .coffee-card:first-child .media {
+                aspect-ratio: 1.3;
+            }
+
+            .coffee-card .media {
+                aspect-ratio: 4 / 4.8;
+            }
+
+            .coffee-card:nth-child(2),
+            .coffee-card:nth-child(3) {
+                margin-top: 0;
+            }
+
+            .coffee-card .coffee-card-content {
+                padding-top: 16px;
+            }
+
+            .coffee-card h3 {
+                font-size: 26px;
+            }
+
+            .coffee-card p {
+                font-size: 13px;
+            }
+
+            .coffee-feature {
+                grid-template-columns: 1fr;
+                margin-top: 40px;
+            }
+
+            .coffee-feature-image {
+                min-height: 0;
+                aspect-ratio: 1.35;
+            }
+
+            .coffee-feature-copy {
+                padding: 35px 24px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .parallax-section {
+                min-height: 490px;
+                padding-block: 80px;
+            }
+
+            .parallax-content h2 {
+                font-size: clamp(45px, 10vw, 70px);
+            }
+
+            .parallax-content p {
+                font-size: 15px;
+            }
+
+            .parallax-background {
+                inset: 0;
+            }
+
+            .experience-list {
+                text-align: left;
+            }
+
+            .experience-item {
+                grid-template-columns: 30px 1fr;
+            }
+
+            .experience-visual {
+                gap: 11px;
+            }
+
+            .experience-visual .media:nth-child(3) {
+                margin-top: 20px;
+            }
+
+            .gallery-header {
+                margin-bottom: 35px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-auto-rows: clamp(90px, 24vw, 160px);
+                gap: 10px;
+            }
+
+            .gallery-grid .gallery-item {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+
+            .gallery-grid .gallery-item:nth-child(5n+1) {
+                grid-column: 1 / -1;
+                grid-row: span 2;
+            }
+
+            .gallery-overlay {
+                opacity: 1;
+                background: linear-gradient(
+                    transparent 75%,
+                    rgba(0,0,0,.35)
+                );
+                padding: 12px;
+            }
+
+            .gallery-overlay span {
+                font-size: 9px;
+            }
+
+            .gallery-overlay svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .gallery-actions {
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 30px;
+            }
+
+            .review-card {
+                text-align: center;
+                padding-block: 35px;
+            }
+
+            .review-controls {
+                justify-content: center;
+            }
+
+            .review-source {
+                font-size: 11px;
+            }
+
+            .visit-detail {
+                text-align: left;
+            }
+
+            .visit-actions {
+                justify-content: center;
+            }
+
+            .visit-actions .btn {
+                width: 100%;
+            }
+
+            .map-frame,
+            .map-frame iframe {
+                min-height: 285px;
+                height: 285px;
+            }
+
+            .map-bottom {
+                flex-direction: row;
+                align-items: center;
+                padding: 17px;
+                gap: 10px;
+            }
+
+            .footer {
+                padding-top: 60px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 20px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin-inline: auto;
+            }
+
+            .footer-column {
+                text-align: center;
+            }
+
+            .footer-column:last-child {
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .mobile-sticky {
+                display: block;
+            }
+
+            body.menu-open .mobile-sticky,
+            body.lightbox-open .mobile-sticky {
+                display: none;
+            }
+
+            .lightbox {
+                padding: 12px;
+            }
+
+            .lightbox-stage {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: minmax(0, 1fr) auto;
+                gap: 14px;
+            }
+
+            .lightbox-photo {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+
+            .lightbox-prev {
+                grid-row: 2;
+                grid-column: 1;
+                justify-self: end;
+            }
+
+            .lightbox-next {
+                grid-row: 2;
+                grid-column: 2;
+                justify-self: start;
+            }
+
+            .lightbox-photo img {
+                max-height: 66dvh;
+            }
+        }
+
+        @media (max-width: 380px) {
+            :root {
+                --gutter: 20px;
+            }
+
+            .hero {
+                min-height: 680px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 290px;
+                margin-inline: auto;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .brand-logo {
+                width: 150px;
+            }
+
+            .coffee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coffee-card:first-child {
+                grid-column: auto;
+            }
+
+            .coffee-card .media,
+            .coffee-card:first-child .media {
+                aspect-ratio: 1.25;
+            }
+
+            .coffee-card .coffee-card-content {
+                text-align: center;
+            }
+
+            .coffee-card p {
+                margin-inline: auto;
+            }
+
+            .hours-table {
+                font-size: 12px;
+            }
+
+            .footer-column a,
+            .footer-column p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-height: 760px) and (min-width: 901px) {
+            .hero {
+                min-height: 680px;
+            }
+
+            .hero h1 {
+                font-size: clamp(65px, 7vw, 105px);
+            }
+
+            .hero-inner {
+                padding-top: 110px;
+                padding-bottom: 95px;
+            }
+
+            .hero-description {
+                margin-top: 20px;
+            }
+
+            .hero-actions {
+                margin-top: 23px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+
+            .js .reveal,
+            .js .reveal-left,
+            .js .reveal-right,
+            .js .image-reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                clip-path: none !important;
+            }
+
+            [data-parallax] {
+                transform: none !important;
+            }
+
+            .media img {
+                transform: none !important;
+            }
+        }
+    </style>
+
+    <noscript>
+        <style>
+            .menu-toggle,
+            #galleryToggle,
+            .review-controls {
+                display: none !important;
+            }
+
+            @media (max-width: 900px) {
+                .site-header {
+                    position: absolute;
+                }
+
+                #mobileNav[hidden] {
+                    display: block !important;
+                    max-height: none;
+                }
+
+                #mobileNav > a:not(.btn) {
+                    display: inline-block;
+                    font-size: 14px;
+                    padding: 7px;
+                    border: 0;
+                }
+
+                #mobileNav .btn {
+                    margin-top: 10px;
+                }
+
+                .hero-inner {
+                    padding-top: 235px;
+                }
+            }
+        </style>
+    </noscript>
+</head>
+
+<body id="top">
+
+    <a class="skip-link" href="#mainContent">
+        Skip to content
+    </a>
+
+    <!-- ========================================
+         REUSABLE SVG ICONS AND BRAND CONCEPT
+    ========================================= -->
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="0"
+        height="0"
+        aria-hidden="true"
+        style="position:absolute;overflow:hidden"
+    >
+        <defs>
+            <symbol id="icon-arrow" viewBox="0 0 24 24">
+                <path
+                    d="M5 19 19 5M6 5h13v13"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+
+            <symbol id="icon-pin" viewBox="0 0 24 24">
+                <path
+                    d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                />
+                <circle
+                    cx="12"
+                    cy="10"
+                    r="2.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                />
+            </symbol>
+
+            <symbol id="icon-clock" viewBox="0 0 24 24">
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="9.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                />
+                <path
+                    d="M12 6v6l4 2.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                />
+            </symbol>
+
+            <symbol id="icon-phone" viewBox="0 0 24 24">
+                <path
+                    d="M7 3 3.5 5c-1 1 1 7 5.5 11.5S19 23 20 21l2-4-5-3-2.5 3a15 15 0 0 1-7-7L10 8 7 3Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+
+            <symbol id="icon-left" viewBox="0 0 24 24">
+                <path
+                    d="m14 5-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+
+            <symbol id="icon-right" viewBox="0 0 24 24">
+                <path
+                    d="m10 5 7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+
+            <symbol id="icon-close" viewBox="0 0 24 24">
+                <path
+                    d="m5 5 14 14M19 5 5 19"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                />
+            </symbol>
+
+            <symbol id="icon-plus" viewBox="0 0 24 24">
+                <path
+                    d="M12 4v16M4 12h16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                />
+            </symbol>
+
+            <symbol id="icon-up" viewBox="0 0 24 24">
+                <path
+                    d="M12 20V4M5 11l7-7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+
+            <symbol id="gold-emblem" viewBox="0 0 80 80">
+                <circle
+                    cx="40"
+                    cy="40"
+                    r="25"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                />
+
+                <circle
+                    cx="40"
+                    cy="40"
+                    r="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width=".7"
+                />
+
+                <g
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                >
+                    <path d="M40 3v8M40 69v8M3 40h8M69 40h8"/>
+                    <path d="m14 14 6 6m40 40 6 6m0-52-6 6M20 60l-6 6"/>
+                    <path d="m26 6 3 8m22 52 3 8m20-48-8 3M14 51l-8 3"/>
+                    <path d="m54 6-3 8M29 66l-3 8m48-20-8-3M14 29l-8-3"/>
+                </g>
+
+                <path
+                    d="M40 22c13 5 16 21 0 36-15-7-15-26 0-36Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                />
+
+                <path
+                    d="M40 22c-9 13 10 21 0 36"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                />
+            </symbol>
+
+            <symbol id="brand-logo" viewBox="0 0 250 72">
+                <use
+                    href="#gold-emblem"
+                    x="0"
+                    y="7"
+                    width="58"
+                    height="58"
+                    style="color:#c5a059"
+                />
+
+                <text
+                    x="70"
+                    y="23"
+                    font-family="Space Grotesk, Arial, sans-serif"
+                    font-size="10"
+                    font-weight="600"
+                    letter-spacing="3"
+                    fill="currentColor"
+                >
+                    SAN ANTONIO
+                </text>
+
+                <text
+                    x="67"
+                    y="57"
+                    font-family="DM Serif Display, Georgia, serif"
+                    font-size="47"
+                    letter-spacing="2"
+                    fill="currentColor"
+                >
+                    GOLD
+                </text>
+
+                <path
+                    d="M207 39h32"
+                    stroke="#c5a059"
+                    stroke-width="1"
+                />
+            </symbol>
+        </defs>
+    </svg>
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+
+            <a href="#home" class="brand" aria-label="San Antonio Gold home">
+                <svg class="brand-logo" viewBox="0 0 250 72" aria-hidden="true">
+                    <use href="#brand-logo"></use>
+                </svg>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#story">Our Story</a>
+                <a href="#coffee">Coffee</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#visit">Visit Us</a>
+            </nav>
+
+            <a
+                class="btn btn-gold header-cta"
+                href="https://www.google.com/maps?cid=8342807977883015376"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Get Directions
+                <svg aria-hidden="true">
+                    <use href="#icon-arrow"></use>
+                </svg>
+            </a>
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile navigation"
+            hidden
+        >
+            <a href="#home">Home</a>
+            <a href="#story">Our Story</a>
+            <a href="#coffee">Coffee</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#visit">Visit Us</a>
+
+            <a
+                class="btn btn-gold"
+                href="https://www.google.com/maps?cid=8342807977883015376"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Get Directions
+                <svg aria-hidden="true">
+                    <use href="#icon-arrow"></use>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+
+        <!-- ========================================
+             HERO SECTION
+        ========================================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background media" data-parallax="0.18">
+                <img
+                    src="gld1.png"
+                    data-image-key="hero"
+                    alt=""
+                    width="1920"
+                    height="1280"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+            </div>
+
+            <div class="container hero-inner">
+                <div class="hero-content">
+
+                    <div
+                        class="eyebrow hero-eyebrow hero-animate"
+                        style="--delay:100ms"
+                    >
+                        Southtown · San Antonio, Texas
+                    </div>
+
+                    <h1>
+                        <span
+                            class="hero-animate"
+                            style="--delay:220ms"
+                        >
+                            Good Coffee.
+                        </span>
+
+                        <span
+                            class="hero-accent hero-animate"
+                            style="--delay:360ms"
+                        >
+                            Golden Moments.
+                        </span>
+                    </h1>
+
+                    <p
+                        class="hero-description hero-animate"
+                        style="--delay:500ms"
+                    >
+                        A good cup changes everything. Discover specialty
+                        coffee, local character and a little more gold
+                        in your everyday routine.
+                    </p>
+
+                    <div
+                        class="hero-actions hero-animate"
+                        style="--delay:620ms"
+                    >
+                        <a
+                            href="https://www.google.com/maps?cid=8342807977883015376"
+                            class="btn btn-gold"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Get Directions
+                            <svg aria-hidden="true">
+                                <use href="#icon-arrow"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#coffee" class="btn btn-outline">
+                            Explore Our Coffee
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <svg
+                class="hero-stamp"
+                viewBox="0 0 160 160"
+                aria-hidden="true"
+            >
+                <defs>
+                    <path
+                        id="stampCircle"
+                        d="M80 80m-61 0a61 61 0 1 1 122 0a61 61 0 1 1-122 0"
+                    />
+                </defs>
+
+                <circle
+                    cx="80"
+                    cy="80"
+                    r="76"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width=".7"
+                />
+
+                <text
+                    font-family="Space Grotesk, Arial, sans-serif"
+                    font-size="10"
+                    letter-spacing="2"
+                    fill="currentColor"
+                >
+                    <textPath href="#stampCircle" textLength="380">
+                        GOOD COFFEE ✳ GOLDEN MOMENTS ✳ SAN ANTONIO ✳
+                    </textPath>
+                </text>
+
+                <use
+                    href="#gold-emblem"
+                    x="46"
+                    y="46"
+                    width="68"
+                    height="68"
+                />
+            </svg>
+
+            <div class="hero-bottom">
+
+                <a href="#story" class="scroll-indicator">
+                    <span class="scroll-line" aria-hidden="true"></span>
+                    Scroll to discover
+                </a>
+
+                <div class="hero-location">
+                    <small>Find your gold</small>
+                    <p>1913 S Flores St · San Antonio, TX</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             BRAND STRIP
+        ========================================= -->
+
+        <div class="brand-strip">
+            <div class="brand-strip-inner">
+                <span>Specialty Coffee</span>
+                <span class="strip-star" aria-hidden="true">✳</span>
+                <span>Southtown, SATX</span>
+                <span class="strip-star" aria-hidden="true">✳</span>
+                <span>Everyday Rituals</span>
+                <span class="strip-star" aria-hidden="true">✳</span>
+                <span>Golden Moments</span>
+            </div>
+        </div>
+
+        <!-- ========================================
+             OUR STORY
+        ========================================= -->
+
+        <section class="story section-padding" id="story">
+            <div class="container story-grid">
+
+                <div class="story-visual reveal-left">
+
+                    <span class="story-image-number" aria-hidden="true">
+                        01.
+                    </span>
+
+                    <figure class="media story-main-image image-reveal">
+                        <img
+                            src="gld2.png"
+                            data-image-key="storyMain"
+                            alt="San Antonio Gold photograph, image 2"
+                            width="800"
+                            height="1000"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+
+                    <figure class="media story-small-image image-reveal">
+                        <img
+                            src="gld3.png"
+                            data-image-key="storySmall"
+                            alt="San Antonio Gold photograph, image 3"
+                            width="500"
+                            height="600"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+
+                </div>
+
+                <div class="story-copy reveal-right">
+
+                    <span class="eyebrow">
+                        A Southtown coffee spot
+                    </span>
+
+                    <h2>
+                        A Little Gold
+                        <br>
+                        <em>in Every Day.</em>
+                    </h2>
+
+                    <p class="section-description">
+                        There is something special about the simple ritual
+                        of getting a good cup of coffee. A moment to slow
+                        down, reset and enjoy wherever the day takes you.
+                    </p>
+
+                    <p class="section-description">
+                        Located on South Flores Street, San Antonio Gold
+                        brings specialty coffee and the creative character
+                        of Southtown together in one neighborhood destination.
+                        Gold first opened its doors in 2019, inside the
+                        Freight Gallery and Studios.
+                    </p>
+
+                    <a href="#visit" class="text-link">
+                        Come find us
+                        <svg aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </a>
+
+                    <div class="story-note">
+                        <svg viewBox="0 0 80 80" aria-hidden="true">
+                            <use href="#gold-emblem"></use>
+                        </svg>
+
+                        <span>
+                            Rooted in San Antonio.
+                            <br>
+                            Made for everyday moments.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             COFFEE SHOWCASE
+        ========================================= -->
+
+        <section class="coffee section-padding" id="coffee">
+            <div class="container">
+
+                <div class="section-header-split reveal">
+
+                    <div>
+                        <span class="eyebrow">
+                            Find your favorite
+                        </span>
+
+                        <h2>
+                            Something
+                            <br>
+                            Worth Sipping.
+                        </h2>
+                    </div>
+
+                    <p class="section-description">
+                        From a comforting espresso to a refreshing cold
+                        brew or a thoughtfully prepared tea, find something
+                        to make your day a little brighter.
+                    </p>
+
+                </div>
+
+                <div class="coffee-grid">
+
+                    <article class="coffee-card reveal" style="--delay:0ms">
+
+                        <div class="media image-reveal">
+                            <img
+                                src="gld4.png"
+                                data-image-key="espresso"
+                                alt="San Antonio Gold photograph, image 4"
+                                width="700"
+                                height="950"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="coffee-card-content">
+                            <span class="coffee-card-index">
+                                01 / The classics
+                            </span>
+
+                            <h3>Espresso & Lattes</h3>
+
+                            <p>
+                                Rich espresso and familiar favorites,
+                                perfect for making the morning your own.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="coffee-card reveal" style="--delay:120ms">
+
+                        <div class="media image-reveal">
+                            <img
+                                src="gld5.png"
+                                data-image-key="coldCoffee"
+                                alt="San Antonio Gold photograph, image 5"
+                                width="700"
+                                height="850"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="coffee-card-content">
+                            <span class="coffee-card-index">
+                                02 / Keep it cool
+                            </span>
+
+                            <h3>Cold Coffee</h3>
+
+                            <p>
+                                Refreshing cold brew and iced coffee
+                                for those warm San Antonio days.
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="coffee-card reveal" style="--delay:240ms">
+
+                        <div class="media image-reveal">
+                            <img
+                                src="gld6.png"
+                                data-image-key="tea"
+                                alt="San Antonio Gold photograph, image 6"
+                                width="700"
+                                height="850"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="coffee-card-content">
+                            <span class="coffee-card-index">
+                                03 / Beyond coffee
+                            </span>
+
+                            <h3>Tea & Matcha</h3>
+
+                            <p>
+                                Explore another side of your daily ritual
+                                with tea and matcha offerings.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <article class="coffee-feature reveal">
+
+                    <div class="media coffee-feature-image">
+                        <img
+                            src="gld7.png"
+                            data-image-key="coffeeFeature"
+                            alt="San Antonio Gold photograph, image 7"
+                            width="900"
+                            height="700"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="coffee-feature-copy">
+
+                        <span class="eyebrow gold-text">
+                            A little unexpected
+                        </span>
+
+                        <h3>
+                            More Than Your
+                            <em>Usual Cup.</em>
+                        </h3>
+
+                        <p>
+                            Curious about something different? Gold has
+                            been featured for creative drinks like the
+                            Holiday in Cambodia, a combination of chai,
+                            cold brew, oat milk and spices.
+                        </p>
+
+                        <p style="margin-top:12px;font-size:12px">
+                            Ask about current offerings when you visit.
+                        </p>
+
+                        <a href="#visit" class="text-link">
+                            Find your next favorite
+                            <svg aria-hidden="true">
+                                <use href="#icon-arrow"></use>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             CINEMATIC PARALLAX
+        ========================================= -->
+
+        <section
+            class="parallax-section"
+            aria-labelledby="slowDownHeading"
+        >
+
+            <div class="parallax-background media" data-parallax="0.14">
+                <img
+                    src="gld8.png"
+                    data-image-key="parallax"
+                    alt=""
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </div>
+
+            <div class="parallax-content reveal">
+
+                <svg
+                    class="parallax-mark"
+                    viewBox="0 0 80 80"
+                    aria-hidden="true"
+                >
+                    <use href="#gold-emblem"></use>
+                </svg>
+
+                <span class="eyebrow">
+                    The good things take a moment
+                </span>
+
+                <h2 id="slowDownHeading">
+                    Slow Down.
+                    <br>
+                    <em>Sip Something Good.</em>
+                </h2>
+
+                <p>
+                    Between the busy mornings and everything that follows,
+                    make a little time for something you love.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             THE GOLD EXPERIENCE
+        ========================================= -->
+
+        <section class="experience dark-section section-padding" id="experience">
+
+            <div class="experience-watermark" aria-hidden="true">
+                GOLD
+            </div>
+
+            <div class="container experience-grid">
+
+                <div class="experience-copy reveal-left">
+
+                    <span class="eyebrow gold-text">
+                        The Gold experience
+                    </span>
+
+                    <h2>
+                        More Than
+                        <br>
+                        <em>Just Coffee.</em>
+                    </h2>
+
+                    <p class="section-description">
+                        Coffee has a way of bringing people together.
+                        Whether you are discovering Southtown or coming
+                        back to a familiar neighborhood spot, make
+                        the moment yours.
+                    </p>
+
+                    <div class="experience-list">
+
+                        <article class="experience-item">
+                            <span>01.</span>
+                            <div>
+                                <h3>The Daily Ritual</h3>
+                                <p>
+                                    A good cup and a moment for yourself,
+                                    whatever your day looks like.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <span>02.</span>
+                            <div>
+                                <h3>Local Character</h3>
+                                <p>
+                                    Discover a coffee destination rooted
+                                    in the creative Southtown neighborhood.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="experience-item">
+                            <span>03.</span>
+                            <div>
+                                <h3>Better Together</h3>
+                                <p>
+                                    Catch up with someone, share a coffee
+                                    or simply enjoy a little time to yourself.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="experience-visual reveal-right">
+
+                    <div class="media image-reveal">
+                        <img
+                            src="gld9.png"
+                            data-image-key="experienceMain"
+                            alt="San Antonio Gold photograph, image 9"
+                            width="1000"
+                            height="800"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="media image-reveal">
+                        <img
+                            src="gld10.png"
+                            data-image-key="experienceLeft"
+                            alt="San Antonio Gold photograph, image 10"
+                            width="600"
+                            height="650"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="media image-reveal">
+                        <img
+                            src="gld11.png"
+                            data-image-key="experienceRight"
+                            alt="San Antonio Gold photograph, image 11"
+                            width="600"
+                            height="650"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             INTERACTIVE IMAGE GALLERY
+        ========================================= -->
+
+        <section class="gallery section-padding" id="gallery">
+            <div class="container">
+
+                <div class="gallery-header reveal">
+
+                    <span class="eyebrow">
+                        A closer look
+                    </span>
+
+                    <h2>
+                        Golden Moments,
+                        <br>
+                        <span class="italic">Captured.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        A collection of moments, details and perspectives
+                        from San Antonio Gold. Discover a little more
+                        with every photograph.
+                    </p>
+
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="11"
+                        aria-label="Enlarge photograph 12"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld12.png"
+                                alt="San Antonio Gold photograph, image 12"
+                                loading="lazy"
+                                decoding="async"
+                                width="800"
+                                height="1000"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 12</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="12"
+                        aria-label="Enlarge photograph 13"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld13.png"
+                                alt="San Antonio Gold photograph, image 13"
+                                loading="lazy"
+                                decoding="async"
+                                width="800"
+                                height="600"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 13</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="13"
+                        aria-label="Enlarge photograph 14"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld14.png"
+                                alt="San Antonio Gold photograph, image 14"
+                                loading="lazy"
+                                decoding="async"
+                                width="600"
+                                height="850"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 14</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="14"
+                        aria-label="Enlarge photograph 15"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld15.png"
+                                alt="San Antonio Gold photograph, image 15"
+                                loading="lazy"
+                                decoding="async"
+                                width="800"
+                                height="600"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 15</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="15"
+                        aria-label="Enlarge photograph 16"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld16.png"
+                                alt="San Antonio Gold photograph, image 16"
+                                loading="lazy"
+                                decoding="async"
+                                width="650"
+                                height="850"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 16</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="16"
+                        aria-label="Enlarge photograph 17"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld17.png"
+                                alt="San Antonio Gold photograph, image 17"
+                                loading="lazy"
+                                decoding="async"
+                                width="900"
+                                height="650"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 17</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="17"
+                        aria-label="Enlarge photograph 18"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld18.png"
+                                alt="San Antonio Gold photograph, image 18"
+                                loading="lazy"
+                                decoding="async"
+                                width="800"
+                                height="650"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 18</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button
+                        class="gallery-item"
+                        type="button"
+                        data-gallery-index="18"
+                        aria-label="Enlarge photograph 19"
+                    >
+                        <span class="media">
+                            <img
+                                src="gld19.png"
+                                alt="San Antonio Gold photograph, image 19"
+                                loading="lazy"
+                                decoding="async"
+                                width="900"
+                                height="650"
+                            >
+                        </span>
+                        <span class="gallery-overlay">
+                            <span>GOLD / 19</span>
+                            <svg aria-hidden="true">
+                                <use href="#icon-plus"></use>
+                            </svg>
+                        </span>
+                    </button>
+
+                </div>
+
+                <div class="gallery-actions">
+
+                    <button
+                        type="button"
+                        id="galleryToggle"
+                        class="btn btn-dark"
+                        aria-expanded="false"
+                        aria-controls="galleryGrid"
+                    >
+                        <span>View Full Gallery</span>
+                        <svg aria-hidden="true">
+                            <use href="#icon-plus"></use>
+                        </svg>
+                    </button>
+
+                    <span class="gallery-count" id="galleryCount">
+                        Showing 8 of 23 photographs
+                    </span>
+
+                </div>
+
+                <noscript>
+                    <p style="text-align:center;margin:25px auto">
+                        Enable JavaScript to explore the interactive
+                        full-screen gallery.
+                    </p>
+                </noscript>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             CUSTOMER REVIEWS
+        ========================================= -->
+
+        <section class="reviews section-padding" id="reviews">
+            <div class="container reviews-inner">
+
+                <div class="reviews-heading reveal-left">
+
+                    <span class="eyebrow">
+                        Words from visitors
+                    </span>
+
+                    <h2>
+                        Loved by
+                        <br>
+                        <em>the Locals.</em>
+                    </h2>
+
+                    <p class="section-description">
+                        See what visitors have shared about their
+                        experiences at San Antonio Gold.
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps?cid=8342807977883015376"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-link"
+                    >
+                        Explore Google Reviews
+                        <svg aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <div class="review-card reveal-right">
+
+                    <div class="review-quote" aria-hidden="true">
+                        “
+                    </div>
+
+                    <div id="reviewContent" aria-live="polite">
+
+                        <blockquote id="reviewText">
+                            Really nice place. Great coffee and good atmosphere.
+                        </blockquote>
+
+                        <p class="review-source" id="reviewSource">
+                            Customer review · Restaurantji
+                        </p>
+
+                        <a
+                            href="https://www.restaurantji.com/tx/san-antonio/gold-coffee-company-/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            id="reviewLink"
+                            class="text-link"
+                            style="font-size:11px;margin-top:10px"
+                        >
+                            Original review source
+                        </a>
+
+                    </div>
+
+                    <div class="review-controls">
+
+                        <button
+                            type="button"
+                            class="review-control"
+                            id="reviewPrev"
+                            aria-label="Previous review"
+                        >
+                            <svg aria-hidden="true">
+                                <use href="#icon-left"></use>
+                            </svg>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="review-control"
+                            id="reviewNext"
+                            aria-label="Next review"
+                        >
+                            <svg aria-hidden="true">
+                                <use href="#icon-right"></use>
+                            </svg>
+                        </button>
+
+                        <span class="review-counter" id="reviewCounter">
+                            01 / 02
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             VISIT US
+        ========================================= -->
+
+        <section class="visit section-padding" id="visit">
+            <div class="container visit-grid">
+
+                <div class="visit-copy reveal-left">
+
+                    <span class="eyebrow">
+                        Come say hello
+                    </span>
+
+                    <h2>
+                        Your Next
+                        <br>
+                        Coffee Is
+                        <br>
+                        <em>Waiting.</em>
+                    </h2>
+
+                    <p class="section-description">
+                        Find San Antonio Gold on South Flores Street.
+                        Stop by, discover your next favorite drink
+                        and make today a little more golden.
+                    </p>
+
+                    <div class="visit-details">
+
+                        <div class="visit-detail">
+
+                            <svg aria-hidden="true">
+                                <use href="#icon-pin"></use>
+                            </svg>
+
+                            <div>
+                                <h3>Find Us</h3>
+
+                                <address>
+                                    1913 S Flores St # A
+                                    <br>
+                                    San Antonio, TX 78204
+                                    <br>
+                                    United States
+                                </address>
+                            </div>
+
+                        </div>
+
+                        <div class="visit-detail">
+
+                            <svg aria-hidden="true">
+                                <use href="#icon-clock"></use>
+                            </svg>
+
+                            <div>
+                                <h3>Opening Hours</h3>
+
+                                <table class="hours-table" aria-label="Business opening hours">
+                                    <tbody>
+                                        <tr>
+                                            <td>Monday – Friday</td>
+                                            <td>6:30 AM – 5:00 PM</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Saturday</td>
+                                            <td>7:00 AM – 5:00 PM</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Sunday</td>
+                                            <td>8:00 AM – 3:00 PM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p class="hours-note">
+                                    Holiday hours may vary. Check the
+                                    business listing for updates.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="visit-detail">
+
+                            <svg aria-hidden="true">
+                                <use href="#icon-phone"></use>
+                            </svg>
+
+                            <div>
+                                <h3>Get in Touch</h3>
+
+                                <a href="tel:+12106676141">
+                                    (210) 667-6141
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="visit-actions">
+
+                        <a
+                            class="btn btn-dark"
+                            href="https://www.google.com/maps?cid=8342807977883015376"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Get Directions
+                            <svg aria-hidden="true">
+                                <use href="#icon-arrow"></use>
+                            </svg>
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="tel:+12106676141"
+                            style="border-color:#171714"
+                        >
+                            Call the Shop
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="visit-visual reveal-right">
+
+                    <div class="media visit-image image-reveal">
+                        <img
+                            src="gld20.png"
+                            data-image-key="visit"
+                            alt="San Antonio Gold photograph, image 20"
+                            width="1000"
+                            height="650"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="map-frame">
+
+                        <iframe
+                            title="San Antonio Gold location on Google Maps"
+                            src="https://maps.google.com/maps?q=San%20Antonio%20Gold%201913%20S%20Flores%20St%20San%20Antonio%20TX%2078204&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            width="700"
+                            height="330"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen
+                        ></iframe>
+
+                    </div>
+
+                    <div class="map-bottom">
+                        <span>
+                            San Antonio Gold
+                            <br>
+                            South Flores Street, SATX
+                        </span>
+
+                        <a
+                            href="https://www.google.com/maps?cid=8342807977883015376"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open in Maps ↗
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             FINAL CONVERSION CTA
+        ========================================= -->
+
+        <section
+            class="parallax-section final-cta"
+            aria-labelledby="finalHeading"
+        >
+
+            <div class="parallax-background media" data-parallax="0.12">
+                <img
+                    src="gld21.png"
+                    data-image-key="finalCta"
+                    alt=""
+                    width="1920"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </div>
+
+            <div class="parallax-content reveal">
+
+                <svg
+                    class="parallax-mark"
+                    viewBox="0 0 80 80"
+                    aria-hidden="true"
+                >
+                    <use href="#gold-emblem"></use>
+                </svg>
+
+                <span class="eyebrow">
+                    See you in Southtown
+                </span>
+
+                <h2 id="finalHeading">
+                    Make Today a
+                    <br>
+                    <em>Little More Golden.</em>
+                </h2>
+
+                <p>
+                    Take a moment for yourself.
+                    Your next good cup of coffee is waiting.
+                </p>
+
+                <a
+                    class="btn btn-gold"
+                    href="https://www.google.com/maps?cid=8342807977883015376"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Get Directions
+                    <svg aria-hidden="true">
+                        <use href="#icon-arrow"></use>
+                    </svg>
+                </a>
+
+                <span class="final-cta-small">
+                    1913 S Flores St · San Antonio, Texas
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="#home"
+                        class="brand"
+                        aria-label="San Antonio Gold home"
+                    >
+                        <svg
+                            class="brand-logo"
+                            viewBox="0 0 250 72"
+                            aria-hidden="true"
+                        >
+                            <use href="#brand-logo"></use>
+                        </svg>
+                    </a>
+
+                    <p>
+                        Specialty coffee, local character and golden
+                        everyday moments in the heart of Southtown,
+                        San Antonio.
+                    </p>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Explore</h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#story">Our Story</a>
+                    <a href="#coffee">Coffee</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#visit">Visit Us</a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Find Us</h3>
+
+                    <p>
+                        1913 S Flores St # A
+                        <br>
+                        San Antonio, TX 78204
+                    </p>
+
+                    <a href="tel:+12106676141">
+                        (210) 667-6141
+                    </a>
+
+                    <a
+                        href="https://www.google.com/maps?cid=8342807977883015376"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Get Directions ↗
+                    </a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Stay Golden</h3>
+
+                    <a
+                        href="https://www.instagram.com/sanantoniogold/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram ↗
+                    </a>
+
+                    <a
+                        href="https://www.google.com/maps?cid=8342807977883015376"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Maps ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear">2026</span>
+                    San Antonio Gold. All rights reserved.
+                </p>
+
+                <p>
+                    Good coffee. Golden moments. SATX.
+                </p>
+
+                <a href="#top" class="footer-top-link">
+                    Back to top
+                    <svg aria-hidden="true">
+                        <use href="#icon-up"></use>
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================================
+         MOBILE DIRECTIONS BAR
+    ========================================= -->
+
+    <div class="mobile-sticky">
+
+        <a
+            class="btn btn-gold"
+            href="https://www.google.com/maps?cid=8342807977883015376"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg aria-hidden="true">
+                <use href="#icon-pin"></use>
+            </svg>
+
+            Get Directions
+
+            <svg aria-hidden="true">
+                <use href="#icon-arrow"></use>
+            </svg>
+        </a>
+
+    </div>
+
+    <!-- ========================================
+         ACCESSIBLE GALLERY LIGHTBOX
+    ========================================= -->
+
+    <dialog
+        class="lightbox"
+        id="lightbox"
+        aria-label="San Antonio Gold photo gallery"
+    >
+
+        <div class="lightbox-top">
+
+            <p id="lightboxCounter">
+                01 / 23
+            </p>
+
+            <button
+                class="lightbox-button"
+                type="button"
+                id="lightboxClose"
+                aria-label="Close gallery"
+                autofocus
+            >
+                <svg aria-hidden="true">
+                    <use href="#icon-close"></use>
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="lightbox-stage">
+
+            <button
+                class="lightbox-button lightbox-prev"
+                type="button"
+                id="lightboxPrev"
+                aria-label="Previous photograph"
+            >
+                <svg aria-hidden="true">
+                    <use href="#icon-left"></use>
+                </svg>
+            </button>
+
+            <div class="lightbox-photo" id="lightboxPhoto">
+                <img
+                    id="lightboxImage"
+                    alt="Selected San Antonio Gold photograph"
+                >
+            </div>
+
+            <button
+                class="lightbox-button lightbox-next"
+                type="button"
+                id="lightboxNext"
+                aria-label="Next photograph"
+            >
+                <svg aria-hidden="true">
+                    <use href="#icon-right"></use>
+                </svg>
+            </button>
+
+        </div>
+
+        <p class="lightbox-caption" id="lightboxCaption" aria-live="polite">
+            San Antonio Gold · Photograph 01
+        </p>
+
+    </dialog>
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+        (() => {
+            "use strict";
+
+            /* ====================================
+               01. CONFIGURATION
+
+               Change the filename values below
+               to rearrange photographs throughout
+               the website without editing sections.
+
+               All 23 photographs are included in
+               the full interactive gallery.
+            ==================================== */
+
+            const IMAGE_MAP = {
+                hero: "gld1.png",
+                storyMain: "gld2.png",
+                storySmall: "gld3.png",
+                espresso: "gld4.png",
+                coldCoffee: "gld5.png",
+                tea: "gld6.png",
+                coffeeFeature: "gld7.png",
+                parallax: "gld8.png",
+                experienceMain: "gld9.png",
+                experienceLeft: "gld10.png",
+                experienceRight: "gld11.png",
+                visit: "gld20.png",
+                finalCta: "gld21.png"
+            };
+
+            const GALLERY_IMAGES = Array.from(
+                { length: 23 },
+                (_, index) => ({
+                    src: `gld${index + 1}.png`,
+                    alt: `San Antonio Gold photograph, image ${index + 1}`
+                })
+            );
+
+            const INITIAL_GALLERY_ORDER = [
+                11, 12, 13, 14, 15, 16, 17, 18
+            ];
+
+            const FULL_GALLERY_ORDER = [
+                ...INITIAL_GALLERY_ORDER,
+                ...GALLERY_IMAGES.map((_, index) => index)
+                    .filter(index =>
+                        !INITIAL_GALLERY_ORDER.includes(index)
+                    )
+            ];
+
+            const reduceMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            );
+
+            const desktopMotion = window.matchMedia(
+                "(min-width: 701px)"
+            );
+
+            /* ====================================
+               02. IMAGE FALLBACKS
+
+               An inline decorative SVG is used
+               instead of unrelated stock photos
+               when a local photograph is missing.
+            ==================================== */
+
+            const fallbackSvg = `
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="1200" height="800"
+                     viewBox="0 0 1200 800">
+
+                    <defs>
+                        <radialGradient id="bg">
+                            <stop offset="0" stop-color="#51432e"/>
+                            <stop offset="1" stop-color="#1d1d18"/>
+                        </radialGradient>
+
+                        <pattern id="texture"
+                                 width="45" height="45"
+                                 patternUnits="userSpaceOnUse">
+
+                            <path d="M0 45 45 0"
+                                  stroke="#c5a059"
+                                  stroke-width=".5"
+                                  opacity=".08"/>
+                        </pattern>
+                    </defs>
+
+                    <rect width="1200" height="800" fill="url(#bg)"/>
+                    <rect width="1200" height="800" fill="url(#texture)"/>
+
+                    <g fill="none" stroke="#c5a059"
+                       transform="translate(600 345)"
+                       opacity=".75">
+
+                        <circle r="98" stroke-width="1"/>
+                        <circle r="80" stroke-width="1"/>
+
+                        <path d="M0-125V-105 M0 105V125
+                                 M-125 0H-105 M105 0H125
+                                 M-88-88L-73-73
+                                 M73 73L88 88
+                                 M88-88L73-73
+                                 M-73 73L-88 88"
+                              stroke-width="2"/>
+
+                        <path d="M0-55C50-25 50 25 0 55
+                                 C-50 25-50-25 0-55Z"
+                              stroke-width="2"/>
+
+                        <path d="M0-55C-40-10 40 10 0 55"
+                              stroke-width="2"/>
+                    </g>
+
+                    <text x="600" y="520"
+                          text-anchor="middle"
+                          fill="#dfc58b"
+                          font-family="Georgia,serif"
+                          font-size="42"
+                          letter-spacing="8">
+                        SAN ANTONIO GOLD
+                    </text>
+                </svg>
+            `;
+
+            const FALLBACK_IMAGE =
+                "data:image/svg+xml;charset=UTF-8," +
+                encodeURIComponent(fallbackSvg);
+
+            function useImageFallback(image) {
+                if (image.dataset.fallbackApplied === "true") {
+                    return;
+                }
+
+                image.dataset.fallbackApplied = "true";
+                image.src = FALLBACK_IMAGE;
+
+                if (image.alt) {
+                    image.alt = "San Antonio Gold decorative artwork";
+                }
+            }
+
+            function bindImage(image) {
+                if (image.dataset.imageBound === "true") {
+                    return;
+                }
+
+                image.dataset.imageBound = "true";
+
+                image.addEventListener("error", () => {
+                    useImageFallback(image);
+                });
+
+                if (
+                    image.getAttribute("src") &&
+                    image.complete &&
+                    image.naturalWidth === 0
+                ) {
+                    useImageFallback(image);
+                }
+            }
+
+            document.querySelectorAll("[data-image-key]").forEach(image => {
+                const key = image.dataset.imageKey;
+
+                if (
+                    IMAGE_MAP[key] &&
+                    image.getAttribute("src") !== IMAGE_MAP[key]
+                ) {
+                    image.src = IMAGE_MAP[key];
+
+                    if (image.alt) {
+                        const number = IMAGE_MAP[key].match(/\d+/);
+
+                        image.alt = number
+                            ? `San Antonio Gold photograph, image ${number[0]}`
+                            : "San Antonio Gold photograph";
+                    }
+                }
+            });
+
+            document.querySelectorAll("img").forEach(bindImage);
+
+            /* ====================================
+               03. YEAR
+            ==================================== */
+
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+
+            /* ====================================
+               04. MOBILE NAVIGATION
+            ==================================== */
+
+            const header = document.getElementById("siteHeader");
+            const menuToggle = document.getElementById("menuToggle");
+            const mobileNav = document.getElementById("mobileNav");
+
+            function setMenu(open, restoreFocus = false) {
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(open)
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    open
+                        ? "Close navigation menu"
+                        : "Open navigation menu"
+                );
+
+                mobileNav.hidden = !open;
+
+                document.body.classList.toggle(
+                    "menu-open",
+                    open
+                );
+
+                header.classList.toggle(
+                    "menu-active",
+                    open
+                );
+
+                if (restoreFocus) {
+                    menuToggle.focus();
+                }
+            }
+
+            menuToggle.addEventListener("click", () => {
+                const isOpen =
+                    menuToggle.getAttribute("aria-expanded") === "true";
+
+                setMenu(!isOpen);
+            });
+
+            mobileNav.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    setMenu(false);
+                });
+            });
+
+            document.addEventListener("keydown", event => {
+                if (
+                    event.key === "Escape" &&
+                    menuToggle.getAttribute("aria-expanded") === "true"
+                ) {
+                    setMenu(false, true);
+                }
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 900) {
+                    setMenu(false);
+                }
+            });
+
+            document.addEventListener("click", event => {
+                if (
+                    menuToggle.getAttribute("aria-expanded") === "true" &&
+                    !header.contains(event.target)
+                ) {
+                    setMenu(false);
+                }
+            });
+
+            /* ====================================
+               05. SCROLL REVEAL ANIMATIONS
+            ==================================== */
+
+            let revealObserver = null;
+
+            function observeReveals(root = document) {
+                if (!revealObserver) {
+                    return;
+                }
+
+                root.querySelectorAll(
+                    ".reveal, .reveal-left, .reveal-right, .image-reveal"
+                ).forEach(element => {
+                    if (!element.classList.contains("is-visible")) {
+                        revealObserver.observe(element);
+                    }
+                });
+            }
+
+            if (
+                "IntersectionObserver" in window &&
+                !reduceMotion.matches
+            ) {
+                revealObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.08,
+                    rootMargin: "0px 0px 30px 0px"
+                });
+
+                document.documentElement.classList.add("js");
+
+                observeReveals();
+
+                /*
+                 * Safety fallback so no section can
+                 * remain hidden if observation fails.
+                 */
+                window.setTimeout(() => {
+                    document.querySelectorAll(
+                        ".reveal, .reveal-left, .reveal-right, .image-reveal"
+                    ).forEach(element => {
+                        if (!element.classList.contains("is-visible")) {
+                            const rect = element.getBoundingClientRect();
+
+                            if (
+                                rect.top < window.innerHeight &&
+                                rect.bottom > 0
+                            ) {
+                                element.classList.add("is-visible");
+                            }
+                        }
+                    });
+                }, 1800);
+            }
+
+            /* ====================================
+               06. SCROLL PROGRESS AND PARALLAX
+            ==================================== */
+
+            const progressBar =
+                document.getElementById("scrollProgress");
+
+            const parallaxElements = Array.from(
+                document.querySelectorAll("[data-parallax]")
+            );
+
+            let frameRequested = false;
+
+            function updateScrollEffects() {
+                frameRequested = false;
+
+                const scrollTop =
+                    window.scrollY ||
+                    document.documentElement.scrollTop ||
+                    0;
+
+                const viewportHeight = window.innerHeight;
+
+                const scrollHeight =
+                    document.documentElement.scrollHeight -
+                    viewportHeight;
+
+                const progress =
+                    scrollHeight > 0
+                        ? Math.min(1, Math.max(0, scrollTop / scrollHeight))
+                        : 0;
+
+                header.classList.toggle(
+                    "scrolled",
+                    scrollTop > 35
+                );
+
+                progressBar.style.transform =
+                    `scaleX(${progress})`;
+
+                if (reduceMotion.matches || !desktopMotion.matches) {
+                    parallaxElements.forEach(element => {
+                        element.style.transform = "none";
+                    });
+
+                    return;
+                }
+
+                parallaxElements.forEach(element => {
+                    const parent = element.parentElement;
+                    const rect = parent.getBoundingClientRect();
+
+                    if (
+                        rect.bottom < -150 ||
+                        rect.top > viewportHeight + 150
+                    ) {
+                        return;
+                    }
+
+                    const speed =
+                        Number(element.dataset.parallax) || 0.12;
+
+                    const centerOffset =
+                        rect.top +
+                        rect.height / 2 -
+                        viewportHeight / 2;
+
+                    const maxOffset = Math.max(
+                        0,
+                        (element.offsetHeight - parent.offsetHeight) / 2
+                    );
+
+                    const displacement = Math.max(
+                        -maxOffset,
+                        Math.min(maxOffset, -centerOffset * speed)
+                    );
+
+                    element.style.transform =
+                        `translate3d(0, ${displacement}px, 0)`;
+                });
+            }
+
+            function requestScrollFrame() {
+                if (!frameRequested) {
+                    frameRequested = true;
+                    window.requestAnimationFrame(updateScrollEffects);
+                }
+            }
+
+            window.addEventListener(
+                "scroll",
+                requestScrollFrame,
+                { passive: true }
+            );
+
+            window.addEventListener(
+                "resize",
+                requestScrollFrame,
+                { passive: true }
+            );
+
+            window.addEventListener(
+                "load",
+                requestScrollFrame
+            );
+
+            if (reduceMotion.addEventListener) {
+                reduceMotion.addEventListener(
+                    "change",
+                    requestScrollFrame
+                );
+
+                desktopMotion.addEventListener(
+                    "change",
+                    requestScrollFrame
+                );
+            }
+
+            requestScrollFrame();
+
+            /* ====================================
+               07. ACTIVE NAVIGATION STATE
+            ==================================== */
+
+            const navLinks = Array.from(
+                document.querySelectorAll(".nav-links a")
+            );
+
+            const navigationSections = [
+                "home",
+                "story",
+                "coffee",
+                "gallery",
+                "visit"
+            ].map(id => document.getElementById(id));
+
+            let navFrameRequested = false;
+
+            function updateActiveNav() {
+                navFrameRequested = false;
+
+                const marker =
+                    window.scrollY + window.innerHeight * 0.35;
+
+                let activeId = "home";
+
+                navigationSections.forEach(section => {
+                    if (section.offsetTop <= marker) {
+                        activeId = section.id;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    const active =
+                        link.getAttribute("href") === `#${activeId}`;
+
+                    link.classList.toggle("active", active);
+
+                    if (active) {
+                        link.setAttribute("aria-current", "location");
+                    } else {
+                        link.removeAttribute("aria-current");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", () => {
+                if (!navFrameRequested) {
+                    navFrameRequested = true;
+                    window.requestAnimationFrame(updateActiveNav);
+                }
+            }, { passive: true });
+
+            updateActiveNav();
+
+            /* ====================================
+               08. FULL IMAGE GALLERY
+            ==================================== */
+
+            const galleryGrid =
+                document.getElementById("galleryGrid");
+
+            const galleryToggle =
+                document.getElementById("galleryToggle");
+
+            const galleryCount =
+                document.getElementById("galleryCount");
+
+            let galleryExpanded = false;
+            let additionalItemsCreated = false;
+
+            function createGalleryItem(index) {
+                const image = GALLERY_IMAGES[index];
+                const number = String(index + 1).padStart(2, "0");
+
+                const button = document.createElement("button");
+
+                button.className = "gallery-item extra-gallery-item";
+                button.type = "button";
+                button.dataset.galleryIndex = String(index);
+
+                button.setAttribute(
+                    "aria-label",
+                    `Enlarge photograph ${index + 1}`
+                );
+
+                button.innerHTML = `
+                    <span class="media">
+                        <img
+                            src="${image.src}"
+                            alt="${image.alt}"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="850"
+                        >
+                    </span>
+
+                    <span class="gallery-overlay">
+                        <span>GOLD / ${number}</span>
+
+                        <svg aria-hidden="true">
+                            <use href="#icon-plus"></use>
+                        </svg>
+                    </span>
+                `;
+
+                bindImage(button.querySelector("img"));
+
+                return button;
+            }
+
+            galleryToggle.addEventListener("click", () => {
+                galleryExpanded = !galleryExpanded;
+
+                if (
+                    galleryExpanded &&
+                    !additionalItemsCreated
+                ) {
+                    const fragment =
+                        document.createDocumentFragment();
+
+                    FULL_GALLERY_ORDER.slice(8).forEach(index => {
+                        fragment.appendChild(
+                            createGalleryItem(index)
+                        );
+                    });
+
+                    galleryGrid.appendChild(fragment);
+                    additionalItemsCreated = true;
+                }
+
+                galleryGrid
+                    .querySelectorAll(".extra-gallery-item")
+                    .forEach(item => {
+                        item.hidden = !galleryExpanded;
+                    });
+
+                galleryGrid.classList.toggle(
+                    "expanded",
+                    galleryExpanded
+                );
+
+                galleryToggle.setAttribute(
+                    "aria-expanded",
+                    String(galleryExpanded)
+                );
+
+                galleryToggle.querySelector("span").textContent =
+                    galleryExpanded
+                        ? "Show Less"
+                        : "View Full Gallery";
+
+                galleryToggle.querySelector("use").setAttribute(
+                    "href",
+                    galleryExpanded
+                        ? "#icon-up"
+                        : "#icon-plus"
+                );
+
+                galleryCount.textContent = galleryExpanded
+                    ? "Showing all 23 photographs"
+                    : "Showing 8 of 23 photographs";
+
+                if (!galleryExpanded) {
+                    document.getElementById("gallery").scrollIntoView({
+                        behavior: reduceMotion.matches
+                            ? "auto"
+                            : "smooth",
+                        block: "start"
+                    });
+                }
+
+                requestScrollFrame();
+            });
+
+            /* ====================================
+               09. GALLERY LIGHTBOX
+            ==================================== */
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const lightboxImage =
+                document.getElementById("lightboxImage");
+
+            const lightboxCounter =
+                document.getElementById("lightboxCounter");
+
+            const lightboxCaption =
+                document.getElementById("lightboxCaption");
+
+            const lightboxPhoto =
+                document.getElementById("lightboxPhoto");
+
+            const lightboxClose =
+                document.getElementById("lightboxClose");
+
+            const lightboxPrev =
+                document.getElementById("lightboxPrev");
+
+            const lightboxNext =
+                document.getElementById("lightboxNext");
+
+            let currentGalleryPosition = 0;
+            let previousFocus = null;
+            let touchStartX = 0;
+            let touchStartY = 0;
+
+            function renderLightbox() {
+                const imageIndex =
+                    FULL_GALLERY_ORDER[currentGalleryPosition];
+
+                const selectedImage =
+                    GALLERY_IMAGES[imageIndex];
+
+                lightboxImage.dataset.fallbackApplied = "false";
+                lightboxImage.alt = selectedImage.alt;
+                lightboxImage.src = selectedImage.src;
+
+                const position = String(
+                    currentGalleryPosition + 1
+                ).padStart(2, "0");
+
+                const imageNumber = String(
+                    imageIndex + 1
+                ).padStart(2, "0");
+
+                lightboxCounter.textContent =
+                    `${position} / ${GALLERY_IMAGES.length}`;
+
+                lightboxCaption.textContent =
+                    `San Antonio Gold · Photograph ${imageNumber}`;
+
+                /*
+                 * Preload neighboring photographs
+                 * for smoother gallery navigation.
+                 */
+                [-1, 1].forEach(direction => {
+                    const nextPosition = (
+                        currentGalleryPosition +
+                        direction +
+                        FULL_GALLERY_ORDER.length
+                    ) % FULL_GALLERY_ORDER.length;
+
+                    const preload = new Image();
+
+                    preload.src =
+                        GALLERY_IMAGES[
+                            FULL_GALLERY_ORDER[nextPosition]
+                        ].src;
+                });
+            }
+
+            function openLightbox(imageIndex) {
+                const position =
+                    FULL_GALLERY_ORDER.indexOf(imageIndex);
+
+                currentGalleryPosition =
+                    position >= 0 ? position : 0;
+
+                previousFocus = document.activeElement;
+
+                renderLightbox();
+
+                if (typeof lightbox.showModal === "function") {
+                    lightbox.showModal();
+                } else {
+                    lightbox.setAttribute("open", "");
+                }
+
+                document.body.classList.add("lightbox-open");
+
+                lightboxClose.focus();
+            }
+
+            function cleanupLightbox() {
+                document.body.classList.remove("lightbox-open");
+
+                if (
+                    previousFocus &&
+                    document.contains(previousFocus)
+                ) {
+                    previousFocus.focus({
+                        preventScroll: true
+                    });
+                }
+
+                previousFocus = null;
+            }
+
+            function closeLightbox() {
+                if (typeof lightbox.close === "function") {
+                    lightbox.close();
+                } else {
+                    lightbox.removeAttribute("open");
+                    cleanupLightbox();
+                }
+            }
+
+            function navigateLightbox(direction) {
+                currentGalleryPosition = (
+                    currentGalleryPosition +
+                    direction +
+                    FULL_GALLERY_ORDER.length
+                ) % FULL_GALLERY_ORDER.length;
+
+                renderLightbox();
+            }
+
+            galleryGrid.addEventListener("click", event => {
+                const button = event.target.closest(
+                    "[data-gallery-index]"
+                );
+
+                if (!button) {
+                    return;
+                }
+
+                openLightbox(
+                    Number(button.dataset.galleryIndex)
+                );
+            });
+
+            lightboxClose.addEventListener(
+                "click",
+                closeLightbox
+            );
+
+            lightboxPrev.addEventListener("click", () => {
+                navigateLightbox(-1);
+            });
+
+            lightboxNext.addEventListener("click", () => {
+                navigateLightbox(1);
+            });
+
+            lightbox.addEventListener(
+                "close",
+                cleanupLightbox
+            );
+
+            lightbox.addEventListener("click", event => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener("cancel", event => {
+                event.preventDefault();
+                closeLightbox();
+            });
+
+            document.addEventListener("keydown", event => {
+                if (!lightbox.hasAttribute("open")) {
+                    return;
+                }
+
+                if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    navigateLightbox(-1);
+                }
+
+                if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    navigateLightbox(1);
+                }
+
+                if (event.key === "Escape") {
+                    event.preventDefault();
+                    closeLightbox();
+                }
+
+                /*
+                 * Focus containment for the
+                 * dialog fallback implementation.
+                 */
+                if (event.key === "Tab") {
+                    const controls = [
+                        lightboxClose,
+                        lightboxPrev,
+                        lightboxNext
+                    ];
+
+                    const first = controls[0];
+                    const last = controls[controls.length - 1];
+
+                    if (
+                        event.shiftKey &&
+                        document.activeElement === first
+                    ) {
+                        event.preventDefault();
+                        last.focus();
+                    } else if (
+                        !event.shiftKey &&
+                        document.activeElement === last
+                    ) {
+                        event.preventDefault();
+                        first.focus();
+                    }
+                }
+            });
+
+            lightboxPhoto.addEventListener("touchstart", event => {
+                touchStartX = event.changedTouches[0].screenX;
+                touchStartY = event.changedTouches[0].screenY;
+            }, { passive: true });
+
+            lightboxPhoto.addEventListener("touchend", event => {
+                const deltaX =
+                    event.changedTouches[0].screenX - touchStartX;
+
+                const deltaY =
+                    event.changedTouches[0].screenY - touchStartY;
+
+                if (
+                    Math.abs(deltaX) > 55 &&
+                    Math.abs(deltaX) > Math.abs(deltaY) * 1.5
+                ) {
+                    navigateLightbox(
+                        deltaX > 0 ? -1 : 1
+                    );
+                }
+            }, { passive: true });
+
+            /* ====================================
+               10. AUTHENTIC CUSTOMER REVIEWS
+
+               Review excerpts are sourced from
+               the public Restaurantji listing.
+
+               No invented ratings or names.
+            ==================================== */
+
+            const reviews = [
+                {
+                    text:
+                        "Really nice place. Great coffee and good atmosphere.",
+                    source:
+                        "Customer review · Restaurantji",
+                    url:
+                        "https://www.restaurantji.com/tx/san-antonio/gold-coffee-company-/"
+                },
+                {
+                    text:
+                        "Best coffee shop in SA! Nothing beats their cold brew",
+                    source:
+                        "Customer review · Restaurantji",
+                    url:
+                        "https://www.restaurantji.com/tx/san-antonio/gold-coffee-company-/"
+                }
+            ];
+
+            const reviewText =
+                document.getElementById("reviewText");
+
+            const reviewSource =
+                document.getElementById("reviewSource");
+
+            const reviewCounter =
+                document.getElementById("reviewCounter");
+
+            const reviewLink =
+                document.getElementById("reviewLink");
+
+            const reviewContent =
+                document.getElementById("reviewContent");
+
+            let reviewIndex = 0;
+
+            function renderReview() {
+                const review = reviews[reviewIndex];
+
+                reviewText.textContent = review.text;
+                reviewSource.textContent = review.source;
+                reviewLink.href = review.url;
+
+                reviewCounter.textContent =
+                    `${String(reviewIndex + 1).padStart(2, "0")} / ` +
+                    `${String(reviews.length).padStart(2, "0")}`;
+
+                if (
+                    !reduceMotion.matches &&
+                    typeof reviewContent.animate === "function"
+                ) {
+                    reviewContent.animate([
+                        {
+                            opacity: 0,
+                            transform: "translateY(10px)"
+                        },
+                        {
+                            opacity: 1,
+                            transform: "translateY(0)"
+                        }
+                    ], {
+                        duration: 350,
+                        easing: "ease-out"
+                    });
+                }
+            }
+
+            function navigateReview(direction) {
+                reviewIndex = (
+                    reviewIndex +
+                    direction +
+                    reviews.length
+                ) % reviews.length;
+
+                renderReview();
+            }
+
+            document.getElementById("reviewPrev")
+                .addEventListener("click", () => {
+                    navigateReview(-1);
+                });
+
+            document.getElementById("reviewNext")
+                .addEventListener("click", () => {
+                    navigateReview(1);
+                });
+
+        })();
+    </script>
+
+</body>
+</html>
